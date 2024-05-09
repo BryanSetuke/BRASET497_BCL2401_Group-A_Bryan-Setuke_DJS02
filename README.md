@@ -1,85 +1,35 @@
-# DJS02 Project Brief: Whole Number Divider
+# Reflections on Whole Number Divider Project
 
-This project focuses on enhancing a web-based Whole Number Divider application. It's designed to help students apply their knowledge of error handling, guided by specific user stories. Before proceeding, familiarise yourself with the Gherkin syntax, a crucial tool for understanding user stories and requirements. Refer to the provided reading materials for a comprehensive guide. Below is the HTML and JavaScript code for a “Whole Number Divider”. At the moment it only meets two user stories (see below under “Resolved Stories”). Please ensure that it meets all user stories listed below:
+## Overview
 
-This exercise provides user stories in [the Gherkin syntax](https://docs.behat.org/en/v2.5/guides/1.gherkin.html). Please make sure you understand the use and meaning of this syntax before continuing. Check out this resource from [Cucumber](https://cucumber.io/docs/gherkin/reference/).
+Embarking on the Whole Number Divider project was an enlightening journey, pushing me to delve deeper into error handling, validation, and user experience aspects of web application development. The project aimed to enhance an existing application by implementing specified user stories, ensuring its robustness and usability.
 
-#### Project Overview
+## Project Background
 
-The existing codebase for the Whole Number Divider meets certain user stories but falls short on others. Your task is to modify and extend the code to address all specified user stories, ensuring a robust, user-friendly application.
+Initially, the Whole Number Divider application had some functionalities in place but lacked comprehensive error handling and validation. My task was to refine the codebase to meet all user stories outlined in the project brief, addressing scenarios like division by zero and handling non-numeric inputs effectively.
 
-![alt text](image.png)
+## Struggles Encountered
 
-#### Starter Code
+### 1. Navigating Error Handling Complexity
+Implementing error handling logic proved challenging, particularly in scenarios like division by zero. Balancing between providing informative error messages for users and logging detailed errors for debugging required careful consideration and experimentation.
 
-The provided HTML and JavaScript setup a basic form for inputting two numbers (dividend and divider) and a button to perform the calculation. The current script captures form submissions and displays the division result. However, it lacks validation, error handling, and the logic to meet all user stories.
+### 2. Crafting Validation Logic
+Designing validation logic to handle various user input scenarios, such as empty inputs and division resulting in decimals, posed another hurdle. It took multiple iterations and extensive testing to ensure the validation logic worked seamlessly across different scenarios.
 
-<h2 style="color:#e67e22">Resolved Stories</h2>
+### 3. Ensuring Browser Compatibility
+Ensuring consistent behavior across various browsers added an extra layer of complexity. Testing the application rigorously across different browsers and devices was essential to identify and resolve compatibility issues.
 
-1. **Initial State**: On page load, the message “No calculation performed” is displayed, indicating no action has been taken yet.
-2. **Whole Number Division**: Upon submitting two numbers that divide evenly (e.g., 20 divided by 10), the application correctly displays the whole number result.
+## Lessons Learned
 
-### Scenario: Starting program state
+### 1. Clarity in Requirements Interpretation
+Understanding and interpreting user stories accurately is paramount for successful project execution. Clear requirements facilitate better planning and ensure alignment with stakeholder expectations.
 
-- GIVEN that the submit button has not been pressed yet
-- AND the code has just loaded
-- THEN “NO calculation performed” should be displayed at the bottom
+### 2. Mastery of Error Handling Techniques
+Learning effective error handling techniques, such as logging errors and providing informative messages to users, enhanced the reliability and usability of the application. Embracing best practices in error handling was pivotal in creating a robust application.
 
-### Scenario: Dividing numbers result in a whole number
+### 3. Embracing Iterative Development
+Adopting an iterative development approach allowed for continuous improvement and refinement of the application. Regular testing, feedback incorporation, and incremental updates played a crucial role in addressing challenges and enhancing functionality.
 
-- GIVEN that the submit button is pressed
-- WHEN 20 is entered into the first input
-- AND 10 is entered into the second input
-- THEN 2 should be displayed at the bottom
- 
-<h2 style="color:#e67e22">Unresolved Stories</h2> 
+## Conclusion
 
-### Scenario: Dividing numbers result in a decimal number
-
-- GIVEN that the submit button is pressed
-- WHEN 20 is entered into the first input
-- AND 3 is entered into the second input
-- THEN the number 6 with no decimal should be shown
- 
-
-### Scenario: Validation when values are missing
-
-- GIVEN that the submit button is pressed
-- WHEN either or both inputs are empty
-- THEN the divisions should not be done
-- AND the following should be displayed: “Division not performed. Both values are required in inputs. Try again”.
- 
-
-### Scenario: An invalid division should log an error in the console
-
-- GIVEN that the submit button is pressed
-- WHEN 20 is entered into the first input
-- AND 0 is entered into the second input
-- THEN the division should not be done
-- AND the following should be displayed: “Division not performed. Invalid number provided. Try again”.
-- AND an error should be logged in the browser console that shows the call stack
-- BUT the program should not crash entirely
- 
-
-### Scenario: Providing anything that is not a number should crash the program
-
-- GIVEN that the submit button is pressed
-- WHEN ‘YOLO’ is entered into the first input
-- AND ‘+++’ is entered into the second input
-- THEN the entire screen should be replaced with “Something critical went wrong. Please reload the page
-- AND an error should be logged in the browser console that shows the call stack.
-
-#### Task Instructions
-
-1. **Review the Starter Code**: Understand the current implementation and its limitations.
-2. **Implement User Stories**: Modify the code to fulfill all unresolved user stories. Pay attention to error handling and user input validation.
-3. **Error Handling**: Ensure the application handles errors gracefully, providing clear feedback to the user without crashing.
-4. **Testing**: Test your application thoroughly with various inputs to ensure it meets all the user stories.
-
-#### Submission Requirements
-
-- Updated HTML and JavaScript files.
-- Submit your project to the LMS Project Tab for DJS02
-
-This project challenges you to think critically about user input, error handling, and providing a seamless user experience. Ensure your solution is robust, user-friendly, and meets the specified requirements.
-
+The Whole Number Divider project provided invaluable insights into various aspects of web application development. By overcoming challenges and embracing best practices, I honed my skills and deepened my understanding of error handling, validation, and user experience principles. Moving forward, I am equipped with newfound knowledge and experience to tackle future development endeavors with confidence.
