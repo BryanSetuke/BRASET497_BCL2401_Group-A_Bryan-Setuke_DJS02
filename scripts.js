@@ -12,11 +12,17 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  if (divider === "0") {
+  if (parseInt(divider) === "0") {
     result.innerText = "Division not performed. Invalid number provided. Try again";
     return;
   }
   
+  if (isNaN(dividend) || isNaN(divider)){
+    console.error("Error: Invalid number provided",new Error().stack)
+    document.write( "Something critical went wrong. Please reload the page");
+    return;
+  }
+
   // Validate input as whole numbers
   if (isNaN(dividend) || isNaN(divider) || dividend % 1 !== 0 || divider % 1 !== 0) {
     result.innerText = "Error: Please enter whole numbers only.";
