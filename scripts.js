@@ -12,9 +12,10 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  if (parseInt(divider) === "0") {
+  if (parseInt(divider) === 0) {
     result.innerText = "Division not performed. Invalid number provided. Try again";
-    return;
+    console.error("Division by zero error: ", new Error().stack);
+    return; 
   }
   
   if (isNaN(dividend) || isNaN(divider)){
